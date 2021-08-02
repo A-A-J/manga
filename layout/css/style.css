@@ -1,0 +1,2715 @@
+@import url(https://lolstatic-a.akamaihd.net/webfonts/live/css/valorant/fonts.css);
+@import url(https://fonts.googleapis.com/css?family=Anton|Black+Han+Sans|Kanit:700|Noto+Sans+HK:900|Noto+Sans+JP:700|Noto+Sans+SC:700|Noto+Sans+TC:700|Oswald:700&display=swap&subset=chinese-hongkong,chinese-simplified,chinese-traditional,cyrillic,japanese,korean,thai,vietnamese);
+
+@font-face {
+    src: url(../Librarys/fonts/JFFlatregular.ttf);
+    font-family: JFFlatregular;
+    font-size: 16px
+}
+
+@font-face {
+    src: url(../Librarys/fonts/Cairo-Regular.ttf);
+    font-family: Cairo;
+    font-size: 16px
+}
+
+:root {
+    --dColor: #ff9100;
+    --dColorIn: #fff;
+    --dColorLigt: #4d4234;
+    --backgroundColorBody: #eee;
+    --backgroundColorHeader: #2d2f33;
+    --textColorMenuHeader1: #ffffff;
+    --textHoverColorMenuAfter: #2d2f33;
+}
+
+html,
+body {
+    background-color: var(--backgroundColorBody);
+    margin: 0;
+    padding: 0;
+    overflow-wrap: break-word;
+    -webkit-text-size-adjust: 100%;
+    box-sizing: border-box;
+    overflow-wrap: anywhere;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    min-width: 0
+}
+
+body {
+    width: 100%;
+    margin: 0 auto;
+    font-size: 0.9375rem;
+    line-height: 1.65;
+    overflow-x: hidden;
+    -ms-overflow-style: scrollbar;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    margin: 0;
+    display: grid;
+    grid-template-rows: 1fr auto auto auto;
+}
+
+:focus {
+    outline: none;
+}
+
+button:focus {
+    outline: none;
+}
+
+input,
+button,
+body,
+html {
+    font-family: "Droid Arabic Kufi", "tahoma", sans-serif !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+a:hover,
+b,
+span,
+p,
+ul.button-ul,
+ul.button-ul>li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: unset;
+}
+
+.transition {
+    -ms-transition: .3s all;
+    -webkit-transition: .3s all;
+    -o-transition: .3s all;
+    transition: .3s all;
+}
+
+.rtl {
+    direction: rtl !important;
+}
+
+.ltr {
+    direction: ltr !important;
+}
+
+.B-wave {
+    box-shadow: unset !important;
+}
+
+/* END CSS HTML */
+/* START CSS HEADER */
+header {
+    background-color: var(--dColor);
+    height: 52px;
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+}
+
+header>#body-header {
+    position: relative;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.clickSliderHeader {
+    float: right;
+    color: var(--textColorMenuHeader1);
+    padding: 17px 18px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.clickSliderHeader>span {
+    display: block;
+    width: 10px;
+    margin-top: 2px;
+    height: 4px;
+    background-color: #000;
+}
+
+header>#body-header>.barsMenuHeader {
+    float: right;
+    color: var(--textColorMenuHeader1);
+    padding: 20px 18px;
+    font-size: 18px;
+    cursor: pointer;
+    display: none;
+}
+
+header>#body-header>.logo {
+    float: right;
+    padding: 8px 12px;
+    line-height: 0;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+header>#body-header>.logo>a>img {
+    max-width: 100%;
+    max-height: 36px;
+}
+
+header>#body-header>.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    float: right;
+    position: relative;
+}
+
+header>#body-header>.menu>li {
+    position: relative;
+    display: table-cell;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    max-width: 100%;
+}
+
+header>#body-header>.menu>li>a {
+    position: relative;
+    display: block;
+    max-width: 55vw;
+    padding: 16px 18px;
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 1.4285714;
+    color: var(--textColorMenuHeader1);
+    text-decoration: none;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    transition: background-color .2s;
+}
+
+header>#body-header>.menu>li>a::after {
+    content: '';
+    display: block;
+    margin: 0 auto;
+    background-color: var(--textHoverColorMenuAfter);
+    height: 1px;
+    width: 0%;
+    position: absolute;
+    bottom: 2px;
+    right: 0;
+    left: 0;
+    opacity: 0;
+    transition: .5s all;
+}
+
+header>#body-header>.menu>li:hover>a::after {
+    width: 65px;
+    opacity: 1;
+}
+
+header>#body-header>.ul-user {
+    position: absolute;
+    left: 0;
+    text-align: left;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    float: right;
+}
+
+header>#body-header>.ul-user>li {
+    position: relative;
+    display: table-cell;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    max-width: 100%;
+}
+
+header>#body-header>.ul-user>li>a {
+    position: relative;
+    display: block;
+    max-width: 55vw;
+    padding: 20px 10px;
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 0;
+    color: var(--textColorMenuHeader1);
+    text-decoration: none;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    transition: background-color .2s;
+}
+
+header>#body-header>.ul-user>li>a>img.avatar {
+    width: 36px;
+    height: 36px;
+}
+
+@media (max-width: 767px) {
+    header>#body-header>.barsMenuHeader {
+        display: block;
+    }
+
+    header>#body-header>.menu {
+        display: none;
+        position: fixed;
+        top: 50px;
+        background-color: black;
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+    }
+
+    header>#body-header>.menu>li {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    header>#body-header>.menu>li>a {
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    header>#body-header>.menu.show {
+        display: block !important;
+    }
+}
+
+.classicDropdownHover {
+    display: none;
+    width: 350px;
+    background-color: #fff;
+    padding: 1.5rem;
+    left: 0;
+    top: 3.25rem;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 3px #0003;
+}
+
+.classicDropdownHover::after {
+    position: absolute;
+    top: -8px;
+    left: 18px;
+    border: 8px solid transparent;
+    opacity: 1;
+    pointer-events: none;
+    content: "";
+    -webkit-transition: all ease .4s;
+    -ms-transition: all ease .4s;
+    transition: all ease .4s;
+    -webkit-transform: translateX(-50%) rotate(-45deg);
+    -ms-transform: translateX(-50%) rotate(-45deg);
+    transform: translateX(-50%) rotate(-45deg);
+    box-shadow: 1px -1px 1px 1px rgb(0 0 0 / 10%);
+    border-color: #fff #fff #fff #fff;
+}
+
+.classicDropdownHover>div>h6 {
+    font-size: 14px;
+}
+
+.classicDropdownHover>div>a {
+    margin-bottom: 5rem;
+    font-size: 13px;
+    border-radius: 10px;
+    background-color: #0000;
+    border: 1px solid var(--dColor);
+    color: var(--backgroundColorHeader);
+    padding: 3px 10px;
+}
+
+.classicDropdownHover>div>a:hover {
+    background-color: var(--dColor);
+    color: var(--dColorIn);
+}
+
+.clickClassicDropdownHover:hover>.classicDropdownHover {
+    display: block;
+}
+
+/* END   CSS HEADER */
+/* START CSS BOOTSTRAP */
+.modal-body .btn-close {
+    float: left;
+    color: rgb(34, 34, 34);
+}
+
+.modal-body .title-modal {
+    display: block;
+    text-align: center;
+    clear: both;
+    color: #333;
+    font-size: 20px;
+}
+
+.modal-body input {
+    position: relative;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    border: none;
+    z-index: 2;
+    width: 100%;
+    color: #333;
+    font-weight: 300;
+    padding: 12px 20px;
+    background-color: transparent;
+    font-size: 13px;
+    border-radius: 4px;
+    line-height: 22px;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.11);
+}
+
+.modal-body .button-submit {
+    border: 1px solid #2d2f33;
+    background-color: #2d2f33;
+    color: #f4d8a8;
+    line-height: 46px;
+    font-size: 16px;
+    padding: 5px;
+    display: inline-block;
+    border: 0px;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.modal-body .clickBottomLoginOrRegsterOrNewPassword {
+    color: #dcbc60;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.modal-body .clickBottomLoginOrRegsterOrNewPassword:hover {
+    color: rgb(0, 0, 0);
+}
+
+.spinner-border-sm {
+    width: 15px;
+    height: 15px;
+    vertical-align: sub !important;
+}
+
+/* END   CSS BOOTSTRAP */
+/* START CSS DATATABLE */
+#table_id_filter>label {
+    display: block;
+    margin: 0.5rem 0;
+}
+
+#table_id_filter>label>input {
+    display: block;
+    width: 100%;
+    padding: 10px 5px;
+}
+
+/* END   CSS DATATABLE */
+/* start css aside */
+#ae-sidebar {
+    transition: .5s all !important;
+    -webkit-transition: .5s all !important;
+    -moz-transition: .5s all !important;
+    -o-transition: .5s all !important;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 240px;
+    height: 100%;
+    background: #19171c;
+    z-index: 4;
+    overflow: hidden;
+}
+
+#ae-sidebar.active {
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+}
+
+.sidebar-item {
+    padding-top: 0;
+    padding: 15px;
+}
+
+.sidebar-item>.menuSidebar>li>a {
+    display: block;
+    padding: 8px 5px;
+    border: 0;
+}
+
+.sidebar-item>h5 {
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 6px 5px;
+    color: #a8a8a8;
+}
+
+.sidebar-item>ul {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: -0.875em -0.5em;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    flex-flow: wrap;
+}
+
+.sidebar-item>ul>li {
+    position: relative;
+    margin: 0.5em 0.4em;
+}
+
+.sidebar-item>ul>li>a {
+    font-size: 12px;
+    border: 1px solid var(--dColor);
+    background-color: #0000;
+    padding: 2px 5px;
+    border-radius: 5px;
+    color: #a8a8a8;
+    -o-transition: .5s all;
+    -webkit-transition: .5s all;
+    -moz-transition: .5s all;
+    transition: .5s all;
+}
+
+.sidebar-item>ul>li>a:hover,
+.sidebar-item>ul>li>a.active {
+    background-color: var(--dColor);
+    color: var(--dColorIn);
+}
+
+#ae-sidebar hr {
+    color: #fff4;
+}
+
+#ae-sidebar .sidebar-item>select {
+    font-size: 13px;
+    background-color: var(--dColor);
+    color: var(--dColorIn);
+    border: 0;
+}
+
+/* end   css aside */
+/* START CSS MAIN */
+main {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+    transition: .5s all;
+    -webkit-transition: .5s all;
+    -moz-transition: .5s all;
+    -o-transition: .5s all;
+    display: block;
+    margin: 0 auto !important;
+}
+
+main.active,
+footer.active {
+    padding-right: 240px !important;
+}
+
+#body-content {
+    border-bottom: 1px solid #00000012 !important;
+    padding-bottom: 1rem;
+}
+
+#body-content:last-child {
+    border: unset !important;
+}
+
+/* END   CSS MAIN */
+/* START CSS FOOTER */
+footer {
+    transition: .5s all !important;
+    -webkit-transition: .5s all !important;
+    -moz-transition: .5s all !important;
+    -o-transition: .5s all !important;
+    background-color: #ffffff;
+    border: 1px solid #eee;
+    position: relative;
+    padding: 15px 0;
+}
+
+.descriptionWebsiteInFooter {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.descriptionWebsiteInFooter>h4,
+.menuVerticalInFooter>h4 {
+    font-size: 15px;
+    margin-bottom: 0.5pc;
+}
+
+.descriptionWebsiteInFooter>p {
+    font-size: 13px;
+    text-align: justify;
+    width: 25pc;
+    color: #5b5b5b;
+}
+
+.menuVerticalInFooter>ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menuVerticalInFooter>ul>li>a {
+    font-size: 13px;
+    color: #5b5b5b;
+}
+
+.Copyright {
+    font-size: 12px;
+    text-align: center;
+    color: #5b5b5b;
+}
+
+.Copyright>a {
+    color: blue;
+}
+
+/* END CSS FOOTER */
+/* START CSS PAGE MANGA ONE*/
+.WorkMangaPage-header {
+    background-color: #222;
+    position: relative;
+    background-image: url(../img/headerManga/1.png);
+    background-position: center top;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 15pc;
+    border-radius: 10px;
+}
+
+.WorkMangaPage-header>.likeAndViewPageManga {
+    position: absolute;
+    left: 1pc;
+    top: 1pc;
+}
+
+.WorkMangaPage-header>.likeAndViewPageManga>span {
+    display: block;
+    background-color: #000;
+    padding: 5px 20px;
+    margin-bottom: 0.5pc;
+    font-size: 13px;
+    text-align: right;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.WorkMangaPage-slid {
+    position: relative;
+    margin-top: -10pc;
+    padding: 5px 0px;
+    display: block;
+    text-align: center;
+    overflow: hidden;
+}
+
+.WorkMangaPage-slid>.avaterMangaPage {
+    background-image: url(../img/mangaAvater/3.jpg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    /* width:250px; */
+    height: 350px;
+    margin: 0 auto;
+}
+
+.WorkMangaPage-slid>.dataMangaPage {
+    margin: 1pc 0;
+    padding: 0 1.4pc;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.WorkMangaPage-slid>.dataMangaPage>span {
+    display: block;
+    margin-bottom: 0.3pc;
+    font-size: 13px;
+    border-radius: 10px;
+    padding: 5px 0;
+    border: 1px solid #00000054;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.WorkMangaPage-slid>.dataMangaPage>span {
+    background-color: #7091fa;
+    color: #fff;
+}
+
+.dataMangaPage-ul-2 {
+    background-color: #fd5959 !important;
+    color: #fff;
+}
+
+.infoMoreManga {
+    margin: 1pc 0;
+    padding: 0 1.4pc;
+}
+
+.infoMoreManga>div {
+    margin-bottom: 1rem;
+    text-align: right;
+    background-color: #fff;
+    padding: 0;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    overflow: hidden;
+}
+
+.infoMoreManga>div>h5 {
+    margin: 0;
+    font-size: 16px;
+    background: #f2f2f2fc;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+.infoMoreManga>div>ul {
+    list-style: none;
+    margin: 0;
+    padding: 5px;
+}
+
+.infoMoreManga>div>ul>li {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 0.3rem;
+}
+
+
+.infoMoreManga>div>.PageOneTeamManga>li {
+    display: inline-block;
+}
+
+.infoMoreManga>div>.PageOneTeamManga>li>a {
+    background-color: var(--bs-danger);
+    padding: 1px 5px;
+    border-radius: 10px;
+    font-size: 11px !important;
+    color: var(--dColorIn);
+}
+
+.titlePageManga {
+    font-weight: bold;
+}
+
+.descriptionPageManga {
+    color: #4f4f4f;
+    font-size: 13px;
+}
+
+.typePageManga {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.typePageManga>li {
+    display: inline-block;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 11px;
+    border: 1px solid #0002;
+    cursor: default;
+}
+
+#ListChaptersManga #dataTableManga_filter>label {
+    display: block;
+}
+
+#ListChaptersManga #dataTableManga_filter>label>input {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0.3rem;
+}
+
+#ListChaptersManga .dataTables_scrollHead {
+    display: none;
+}
+
+#ListChaptersManga .title {
+    font-size: 13px;
+}
+
+#ListChaptersManga .status {
+    background-color: var(--dColor);
+    color: var(--bs-gray-dark);
+    padding: 3px 5px;
+    border-radius: 5px;
+    border: 1px solid #0002;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+#ListChaptersManga .Team {
+    float: left;
+    background-color: var(--bs-danger);
+    font-size: 10px;
+    border-radius: 5px;
+    padding: 1px 7px;
+    color: var(--bs-white);
+}
+
+#ListChaptersManga .View {
+    float: left;
+    background-color: var(--backgroundColorHeader);
+    font-size: 10px;
+    border-radius: 5px;
+    padding: 1px 7px;
+    color: var(--bs-white);
+    margin: 0 5px;
+}
+
+#ListChaptersManga .calendar {
+    float: left;
+    background-color: var(--bs-table-active-bg);
+    font-size: 10px;
+    border-radius: 5px;
+    padding: 1px 7px;
+    color: var(--backgroundColorHeader);
+    margin: 0 5px;
+}
+
+#ListChaptersManga .page-item>a {
+    font-size: 10px;
+    padding: 5px 10px;
+    background-color: #4f4f4f;
+    color: #fff;
+    border-radius: 0;
+    border: 1px solid #4f4f4f;
+}
+
+#ListChaptersManga .page-item.active>a {
+    background-color: var(--dColor);
+    border: 1px solid var(--dColor);
+}
+
+#ListChaptersManga .mr-LCMp {
+    margin-right: -2px;
+}
+
+.modal-content-TOOLS {
+    background-color: #eaeaea;
+    box-shadow: 0 0 8px 2px #0005;
+    border: 0;
+}
+
+.headerModal {
+    background-image: url(../img/toolImg/2.gif);
+    background-position-x: 55%;
+    background-position-y: 78%;
+    background-size: 130%;
+    background-repeat: no-repeat;
+    padding: 1.9rem 10px;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.headerModal::after {
+    content: '';
+    display: block;
+    position: absolute;
+    background-image: url(../img/toolImg/shadow.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: rotate(180deg);
+    opacity: 0.5;
+}
+
+.headerModal>h5,
+.headerModal>i {
+    color: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+#typeModal .containerModal>p {
+    font-size: 14px;
+    text-align: center;
+}
+
+#typeModal .containerModal>div {
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem 0;
+}
+
+#typeModal .containerModal>div>a {
+    background-color: var(--dColor);
+    color: var(--dColorIn);
+    border-radius: 5px;
+    margin: 3px 0.5rem;
+    padding: 2px 7px;
+    font-size: 13px;
+}
+
+/* END   CSS PAGE MANGA ONE*/
+/* START CSS LIST MANGA */
+.titlePage {
+    font-size: 15px;
+    color: rgb(82, 82, 82);
+}
+
+.Main_LM_PAGE {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: -0.875em -0.5em;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.Main_LM_PAGE>.LM-PAGE {
+    position: relative;
+    width: 9rem !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0.5em 0.4em;
+    float: none;
+    min-height: 0
+}
+
+.LM-PAGE>.numbercChNew {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: yellowgreen;
+    color: #fff;
+    border: 0;
+    border-radius: 5px;
+    font-size: 11px;
+    padding: 2px 7px;
+}
+
+.MangaOne {
+    max-width: 100%;
+    width: 11rem !important;
+    display: block;
+    position: relative;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    padding: 0em;
+    border-radius: 5px !important;
+    height: 12rem !important;
+    overflow: hidden;
+}
+
+.MangaOne>img {
+    width: 100%;
+    position: relative;
+}
+
+.MangaOne:hover,
+.LM-PAGE:hover>.numbercChNew {
+    transform: translate(0px, 10px);
+}
+
+.MangaOne::after {
+    content: '';
+    display: block;
+    position: absolute;
+    background-image: url(../img/toolImg/shadow.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0pc;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+}
+
+.MangaOne>.title {
+    position: absolute;
+    width: 100%;
+    bottom: 20px;
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+}
+
+.MangaOne:hover>.title {
+    bottom: 80px;
+}
+
+/* END   CSS LIST MANGA */
+.MainLnPage {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: -0.875em -0.5em;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.NewsPost {
+    position: relative;
+    width: 25rem !important;
+    height: 15rem !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0.5em 0.4em;
+    float: none;
+    min-height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.NewsPost::after {
+    content: '';
+    display: block;
+    position: absolute;
+    background-image: url(../img/toolImg/shadow.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0pc;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    z-index: 2;
+}
+
+.NewsPost>img {
+    transition: .5s all;
+}
+
+.NewsPost:hover>img {
+    transform: scale(1.5);
+}
+
+.NewsPost>a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    z-index: 3;
+    padding-top: 9rem;
+}
+
+.NewsPost>a>span {
+    position: relative;
+    display: block;
+    color: #fff;
+    z-index: 3;
+}
+
+.NewsPost>a>.sectionNews {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.NewsPost>a>.titleNews {
+    margin: 0.3rem 0;
+}
+
+.NewsPost>a>.titleNews,
+.NewsPost>a>.infoNews {
+    font-size: 12px;
+    color: #ddd;
+}
+
+/* end css main */
+/* Lodiing */
+.lds-ripple {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-ripple div {
+    position: absolute;
+    border: 4px solid var(--dColor);
+    opacity: 1;
+    border-radius: 50%;
+    animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.lds-ripple div:nth-child(2) {
+    animation-delay: -0.5s;
+}
+
+@keyframes lds-ripple {
+    0% {
+        top: 36px;
+        left: 36px;
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+
+    100% {
+        top: 0px;
+        left: 0px;
+        width: 72px;
+        height: 72px;
+        opacity: 0;
+    }
+}
+
+/* end css lodiing */
+/* start css scroll javascript */
+.simplebar-scrollbar::before {
+    background-color: #eee !important;
+    width: 3px !important;
+}
+
+/* end css scroll javascript */
+/* start css subject&Meassge */
+.messagePost>.titleMessage {
+    font-size: 17px;
+    margin: 1rem 0;
+}
+
+.message-inner {
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.message-cell--user {
+    flex: 0 0 160px;
+    position: relative;
+    background: rgba(230, 230, 230, 0.93);
+    border: 1px solid #ddd;
+    min-width: 0px;
+}
+
+.message-cell--user .starusMessage {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    background-color: #0001;
+    border: 1px solid #eee;
+}
+
+.message-cell--user .message-avatar {
+    position: relative;
+    display: inline-block;
+    vertical-align: bottom;
+    margin-bottom: .5em;
+}
+
+.message-cell--user .message-avatar>span {
+    font-size: 25px;
+    background-color: #cc66cc;
+    color: #602060;
+    width: 90px;
+    height: 90px;
+}
+
+.message-cell--user .message-avatar>img {
+    width: 90px;
+    height: 90px;
+}
+
+.message-userDetails>.name {
+    display: block;
+    margin-top: 9px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.message-userDetails>.rank {
+    font-size: 11px;
+    background-color: var(--dColor);
+    color: #fff;
+    border-radius: 5px;
+    padding: 2px 7px;
+    display: block;
+    margin-top: 6px;
+}
+
+.message-cell--main {
+    flex: 1 1 auto;
+    width: 100%;
+    min-width: 0;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-right: 0;
+    display: grid !important;
+    grid-template-rows: auto 1fr auto;
+}
+
+.message-cell--main>.attribution {
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    padding-bottom: 3px;
+}
+
+.message-cell--main>.attribution>span {
+    font-size: 13px;
+}
+
+.message-cell--main>.text {
+    font-family: "Droid Arabic Kufi", "tahoma", sans-serif;
+    font-weight: normal;
+    font-size: 13px;
+    color: #2e3539;
+    padding: 2px 2px;
+    overflow: hidden;
+}
+
+.message-cell--main>.text>.codemain {
+    color: #312662;
+    font: normal 12px Droid Arabic Kufi;
+    max-height: 50px;
+    min-height: 100px;
+    width: auto;
+    /* direction: ltr; */
+    overflow: scroll;
+    clear: both;
+}
+
+.message-cell--main>.reactionsBar {
+    padding-top: 5px;
+    border-top: 1px solid #ddd;
+}
+
+.message-cell--main>.reactionsBar>ul {
+    list-style: none !important;
+}
+
+.message-cell--main>.reactionsBar>ul>li {
+    display: inline-block;
+}
+
+.message-cell--main>.reactionsBar>ul>li>a {
+    background-color: #eee;
+    padding: 0;
+    border-radius: 5px;
+    font-size: 11px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+.message-cell--main>.reactionsBar>ul>li>a>i {
+    background-color: #ddd;
+    padding: 6px 5px;
+}
+
+.message-cell--main>.reactionsBar>ul>li>a>span {
+    padding: 2px 5px;
+}
+
+.messagePost>.newReplyPost>ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.messagePost>.newReplyPost>ul>li {
+    display: inline-block;
+}
+
+.messagePost>.newReplyPost>ul>li>a {
+    background-color: var(--dColor);
+    padding: 2px 10px;
+    font-size: 12px;
+    border-radius: 5px;
+    color: var(--dColorIn);
+}
+
+/* end css subject&Meassge */
+/* start page loginANDregsterANDpassword&CheckEmail */
+.landing-decoration {
+    width: 64%;
+    height: 140%;
+    border-radius: 50%;
+    background: url(https://odindesignthemes.com/vikinger/img/landing/dot-texture.png) repeat 0 0 #fff;
+    position: fixed;
+    top: -20%;
+    left: -32%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+#formPage {
+    padding: 2rem;
+    transition: .5s all;
+}
+
+#formPage>.title {
+    font-size: 23px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+#formPage .form-floating>label {
+    right: 0 !important;
+}
+
+#formPage .form-floating>.form-control:focus~label,
+#formPage .form-floating>.form-control:not(:placeholder-shown)~label,
+#formPage .form-floating>.form-select~label {
+    transform: scale(.85) translateY(-.5rem) translateX(3.7rem) !important;
+}
+
+#formPage label {
+    font-size: 13px !important;
+    margin-top: 3px !important;
+}
+
+#formPage .form-check {
+    font-size: 12px;
+}
+
+#formPage .text-muted>a {
+    text-decoration: underline;
+}
+
+#formPage .helpPassword {
+    font-size: 12px;
+}
+
+#formPage .ClickButton,
+#formPage .ClickButtonNotNew {
+    position: relative;
+    width: 100%;
+    margin: 1rem 0;
+    font-size: 14px;
+    padding: 10px 0;
+    background-color: var(--dColor);
+    border: 0 !important;
+    box-shadow: 4px 7px 12px 0 rgb(97 93 250 / 20%);
+    overflow: hidden;
+}
+
+#formPage .ClickButtonNotNew {
+    background-color: #2b2b2b;
+}
+
+#formPage .socialMedia {
+    margin-top: 1rem;
+    position: relative;
+}
+
+#formPage .socialMedia>.title {
+    font-size: 11px;
+    text-align: center;
+}
+
+#formPage .socialMedia>.title::after {
+    right: 0;
+    content: "";
+    width: 40px;
+    height: 1px;
+    background-color: #eaeaf5;
+    position: absolute;
+    top: 7px;
+}
+
+#formPage .socialMedia>.title::before {
+    left: 0;
+    content: "";
+    width: 40px;
+    height: 1px;
+    background-color: #eaeaf5;
+    position: absolute;
+    top: 7px;
+}
+
+#formPage .socialMedia>ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+#formPage .socialMedia>ul>li {
+    display: inline-block;
+}
+
+#formPage .socialMedia>ul>li>a {
+    background-color: #eee;
+    padding: 6px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.MainPageLogin>.logo {
+    width: 85px;
+}
+
+.MainPageLogin>.Title {
+    font-size: 25px;
+    color: #fff;
+}
+
+.MainPageLogin>.des {
+    font-size: 16px;
+    color: #fff;
+    width: 450px;
+    text-align: justify;
+}
+
+.MainPageLogin>.ClickGroubLoginAndRigster {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.MainPageLogin>.ClickGroubLoginAndRigster>.loginClick {
+    position: relative;
+    border: 1px solid #ddd;
+    border-left: 0;
+    font-size: 13px;
+    padding: 5px 10px;
+    cursor: pointer;
+    color: #fff;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: hidden;
+}
+
+.MainPageLogin>.ClickGroubLoginAndRigster>.regsterClick {
+    position: relative;
+    border: 1px solid #ddd;
+    font-size: 13px;
+    padding: 5px 10px;
+    cursor: pointer;
+    color: #fff;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    overflow: hidden;
+}
+
+.MainPageLogin>.ClickGroubLoginAndRigster>.loginClick>span,
+.MainPageLogin>.ClickGroubLoginAndRigster>.regsterClick>span {
+    position: relative;
+    z-index: 2;
+}
+
+.MainPageLogin>.ClickGroubLoginAndRigster>.loginClick>.hoverLogin {
+    position: absolute;
+    top: 0;
+    left: -102px;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 1;
+    -ms-transition: .3s all;
+    -webkit-transition: .3s all;
+    -o-transition: .3s all;
+    transition: .3s all;
+}
+
+.MainPageLogin>.ClickGroubLoginAndRigster>.loginClick>.hoverLogin.show {
+    left: 0px;
+}
+
+.MainPageLogin>.ClickGroubLoginAndRigster>.regsterClick>.hoverRegster {
+    position: absolute;
+    top: 0;
+    right: -90px;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 1;
+    -ms-transition: .3s all;
+    -webkit-transition: .3s all;
+    -o-transition: .3s all;
+    transition: .3s all;
+}
+
+.MainPageLogin>.ClickGroubLoginAndRigster>.regsterClick>.hoverRegster.show {
+    right: 0;
+}
+
+.MainPageLogin>.ClickGroubLoginAndRigster>.active {
+    color: #000;
+}
+
+@media (max-width:992px) {
+    .landing-decoration {
+        display: none;
+    }
+}
+
+/* end page loginANDregsterANDpassword&CheckEmail */
+/* media */
+@media (max-width: 768px) {
+    .message-inner {
+        display: block !important;
+    }
+
+    .message-cell--user>div>.text-center,
+    .message-cell--user>div>.message-userDetails {
+        display: inline-block !important;
+        vertical-align: middle !important;
+        margin: 0 5px !important;
+    }
+
+    .descriptionWebsiteInFooter>p {
+        width: unset !important;
+    }
+}
+
+/* end media */
+/* start css page profile */
+#Profile {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    min-width: 100%;
+    margin-top: 1rem;
+}
+
+#Profile .ProfileHeader {
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+#Profile .ProfileHeader>.ProfileCover {
+    position: relative;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    height: 300px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 -1px 3px 0px #0001;
+}
+
+#Profile .ProfileHeader>.userA-N {
+    position: absolute;
+    text-align: center;
+    top: 10rem;
+    left: 0;
+    right: 0;
+}
+
+#Profile .ProfileHeader>.userA-N>img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 1px solid #0003;
+    box-shadow: 0 0 5px 1px #0004;
+    margin-bottom: 1rem;
+}
+
+#Profile .ProfileHeader>.userA-N>.NameAndRank {
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+#Profile .ProfileHeader>.userA-N>.NameAndRank>h5 {
+    font-size: 20px;
+}
+
+#Profile .ProfileHeader>.userA-N>.NameAndRank>p {
+    font-size: 13px;
+}
+
+#Profile .ProfileHeader>.dataUsernameContent {
+    padding: 2rem 0;
+    background-color: #fff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    box-shadow: 0 0 3px 0px #0001;
+}
+
+#Profile .ProfileHeader>.dataUsernameContent .SocialLinks {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#Profile .ProfileHeader>.dataUsernameContent .SocialLinks>ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: right;
+}
+
+#Profile .ProfileHeader>.dataUsernameContent .SocialLinks>ul>li {
+    position: relative;
+    margin: 2px 4px;
+    -ms-transition: .3s all;
+    -webkit-transition: .3s all;
+    -o-transition: .3s all;
+    transition: .3s all;
+}
+
+#Profile .ProfileHeader>.dataUsernameContent .SocialLinks>ul>li:hover {
+    transform: translate(0px, -5px);
+}
+
+#Profile .ProfileHeader>.dataUsernameContent .SocialLinks>ul>li>a {
+    font-size: 16px;
+    padding: 5px 6px;
+    background-color: #eee;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#Profile .ProfileHeader>.dataUsernameContent .UserStats {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#Profile .ProfileHeader>.dataUsernameContent .UserStats>ul {
+    list-style: none;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+}
+
+#Profile .ProfileHeader>.dataUsernameContent .UserStats>ul>li {
+    position: relative;
+    display: block;
+    margin: 2px 15px;
+    text-align: center;
+}
+
+#Profile .ProfileHeader>.dataUsernameContent .UserStats>ul>li::after {
+    content: "";
+    width: 1px;
+    height: 20px;
+    background-color: rgb(226, 224, 224);
+    position: absolute;
+    top: 13px;
+    left: -7px;
+}
+
+#Profile .ProfileHeader>.dataUsernameContent .UserStats>ul>li>span.title {
+    display: block;
+    font-size: 13px;
+    color: #626262;
+}
+
+#Profile .ProfileHeader>.dataUsernameContent .UserStats>ul>li>span.text {
+    display: block;
+    font-size: 12px;
+    color: #000;
+}
+
+#Profile .ProfileHeader .infoActions {
+    position: absolute;
+    top: 16.5rem;
+    left: 1.3rem;
+    display: flex;
+}
+
+#Profile .ProfileHeader .infoActions>.addFriend {
+    position: relative;
+    background-color: #434343;
+    color: #fff;
+    font-size: 13px;
+    padding: 2px 10px 2px 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+    box-shadow: 4px 0px 4px 1px #0000003b;
+}
+
+#Profile .ProfileHeader .infoActions>.sendMessage {
+    background-color: #615dfa;
+    color: #fff;
+    font-size: 13px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: -4px 0px 4px 1px #0000003b;
+}
+
+#Profile .ProfileHeader .infoActions>.sendMessage>a {
+    padding: 2px 10px;
+    display: block;
+}
+
+#Profile .ProfileNav {
+    position: relative;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 3px 0px #0001;
+    overflow: hidden;
+}
+
+#Profile .ProfileNav>ul {
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    width: 100%;
+    padding: 0;
+}
+
+#Profile .ProfileNav>ul>li {
+    margin: 0 2rem;
+    padding: 1rem 0;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: .5s all;
+}
+
+#Profile .ProfileNav>ul>li::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    content: '';
+    width: 0;
+    height: 2px;
+    margin: 0 auto;
+    background-color: #aa2af1;
+    transition: .5s all;
+}
+
+#Profile .ProfileNav>ul>li:hover::after {
+    width: 100%;
+}
+
+#Profile .ProfileNav>ul>li.active::after {
+    width: 100%;
+}
+
+#Profile .ProfileNav>ul>li>a>span.icon {
+    display: block;
+    position: absolute;
+    top: 12px;
+    left: 0;
+    right: 0;
+    transition: .3s all;
+}
+
+#Profile .ProfileNav>ul>li:hover>a>span.icon {
+    opacity: 0;
+    transform: translate(0, -30px);
+}
+
+#Profile .ProfileNav>ul>li>a>span.icon>svg {
+    width: 28px;
+}
+
+#Profile .ProfileNav>ul>li>a>span.icon path,
+#Profile .ProfileNav>ul>li>a>span.icon polygon {
+    fill: #adafca;
+}
+
+#Profile .ProfileNav>ul>li>a>span.title {
+    display: block;
+    font-size: 13px;
+    color: #000;
+    transform: translate(0, 27px);
+    transition: .3s all;
+    opacity: 0;
+}
+
+#Profile .ProfileNav>ul>li:hover>a>span.title {
+    opacity: 1;
+    transform: translate(0, 0px);
+}
+
+#Profile .ProfileCard {
+    position: relative;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 3px 0px #0001;
+    padding: 15px;
+    overflow: hidden;
+}
+
+#Profile .ProfileCard .title {
+    font-size: 12px;
+    font-weight: bold;
+    font-family: JFFlatregular;
+}
+
+#Profile .ProfileCard .more {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    color: #858585;
+    cursor: pointer;
+}
+
+#Profile .ProfileCard .drop {
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: 100px;
+    z-index: 1;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+#Profile .ProfileCard .more:hover .drop {
+    display: block;
+}
+
+#Profile .ProfileCard .drop>ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+#Profile .ProfileCard .drop>ul>li {
+    border-bottom: 1px solid #0002;
+}
+
+#Profile .ProfileCard .drop>ul>li>a {
+    font-size: 12px;
+    color: #000;
+    padding: 8px 0;
+    display: block;
+    text-align: center;
+}
+
+#Profile .ProfileCard .drop>ul>li>a:hover {
+    background-color: #f4f4f4;
+}
+
+#Profile .ProfileCard .drop>ul>li:last-child {
+    border: 0;
+}
+
+#Profile .ProfileCard.aboutMe>.des {
+    font-size: 11px;
+    color: #5d5d5d;
+    text-align: justify;
+}
+
+#Profile .ProfileCard.aboutMe>ul {
+    margin: 0;
+    padding: 0;
+    margin-top: 0.5rem;
+    position: relative;
+    display: block;
+    list-style: none;
+}
+
+#Profile .ProfileCard.aboutMe>ul>li {
+    font-size: 11px;
+    display: flex;
+    border-bottom: 1px solid #0001;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+}
+
+#Profile .ProfileCard.aboutMe>ul>li>.title {
+    font-size: 12px;
+    font-weight: bold;
+    font-family: JFFlatregular;
+    flex: 1;
+}
+
+#Profile .ProfileCard.ProfileCard>.title>b {
+    background-color: #eee;
+    border: 1px solid #ddd;
+    padding: 1px 6px;
+    border-radius: 5px;
+    font-size: 10px;
+    margin: 0 2px;
+}
+
+#Profile .ProfileCard.listRank>ul {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+#Profile .ProfileCard.listRank>ul>li {
+    display: inline-block;
+    margin: 2px 8px;
+}
+
+#Profile .ProfileCard.listRank>ul>li>.rank {
+    width: 32px;
+    height: 35px;
+    display: block;
+    cursor: help;
+}
+
+.rank1 {
+    background-image: url(../img/rank/1.png);
+}
+
+.rank2 {
+    background-image: url(../img/rank/2.png);
+}
+
+.rank3 {
+    background-image: url(../img/rank/3.png);
+}
+
+#Profile .ProfileCard.listFriend>ul {
+    margin: 0.8rem 0 0rem 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    overflow: hidden;
+}
+
+#Profile .ProfileCard.listFriend>ul>li {
+    display: block;
+    border-bottom: 1px solid #0001;
+    margin-bottom: 7px;
+    padding-bottom: 7px;
+}
+
+#Profile .ProfileCard.listFriend>ul>li>.avatar {
+    display: inline-block;
+}
+
+#Profile .ProfileCard.listFriend>ul>li>.avatar>img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 0 2px 1px #0004;
+}
+
+#Profile .ProfileCard.listFriend>ul>li>.name {
+    display: inline-block;
+    margin: 0 5px;
+    font-size: 12px;
+}
+
+#Profile .ProfileCard.ProfileCard>a.link {
+    position: relative;
+    background-color: var(--dColor);
+    color: var(--dColorIn);
+    font-size: 12px;
+    display: block;
+    padding: 7px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 0;
+}
+
+#Profile .ProfileCard.ProfilePosts>.userPost {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.8rem;
+}
+
+#Profile .ProfileCard.ProfilePosts>.userPost>.avatar {
+    border-radius: 50%;
+}
+
+#Profile .ProfileCard.ProfilePosts>.userPost>.userNameTime {
+    margin: 0 3px;
+}
+
+#Profile .ProfileCard.ProfilePosts>.userPost>.prefix {
+    position: absolute;
+    left: 1px;
+    top: 9px;
+    font-size: 10px;
+    background-color: var(--dColor);
+    color: var(--dColorIn);
+    padding: 2px 5px;
+    border-radius: 5px;
+    cursor: default;
+}
+
+#Profile .ProfileCard.ProfilePosts>.userPost>.userNameTime>.name {
+    display: block;
+    font-size: 12px;
+}
+
+#Profile .ProfileCard.ProfilePosts>.mainPost {
+    position: relative;
+    overflow: hidden;
+}
+
+#Profile .ProfileCard.ProfilePosts>.mainPost>a {
+    font-size: 15px;
+    font-weight: bold;
+    font-family: JFFlatregular;
+}
+
+#Profile .ProfileCard.ProfilePosts>.mainPost>a:hover {
+    text-decoration: underline;
+    color: red;
+}
+
+#Profile .ProfileCard.ProfilePosts>.mainPost>p {
+    font-size: 12px;
+    margin: 0.4rem 0;
+}
+
+#Profile .ProfileCard.ProfilePosts>.mainPost>img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 1rem;
+}
+
+#Profile .ProfileCard.ProfilePosts>.footerPost {
+    position: relative;
+    overflow: hidden;
+    margin-top: 1rem;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    border-top: 1px solid #0002;
+    padding-top: 0.5rem;
+    cursor: default;
+}
+
+#Profile .ProfileCard.ProfilePosts>.footerPost>.status {
+    flex: 1;
+}
+
+#Profile .ProfileCard.ProfilePosts>.footerPost>.status>span {
+    font-size: 11px;
+    background-color: #ddd;
+    padding: 0px 6px;
+    border-radius: 5px;
+}
+
+#Profile .ProfileCard.ProfilePosts>.footerPost>.status>span.eye {
+    background-color: var(--textHoverColorMenuAfter);
+    color: var(--bs-white);
+}
+
+#Profile .ProfileCard.ProfilePosts>.footerPost>.status>span.heart {
+    background-color: var(--bs-danger);
+    color: var(--bs-white);
+}
+
+#Profile .ProfileCard.ProfilePosts>.footerPost>.comment {
+    /* flex: 1; */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#Profile .ProfileCard.ProfilePosts>.footerPost>.comment>h5 {
+    font-size: 12px;
+}
+
+#Profile .ProfileCard.ProfilePosts>.footerPost>.comment>ul {
+    margin: 0 10px;
+    padding: 0;
+    list-style: none;
+}
+
+#Profile .ProfileCard.ProfilePosts>.footerPost>.comment>ul>li {
+    display: inline-block;
+    margin: 0 -8px;
+}
+
+#Profile .ProfileCard.ProfilePosts>.footerPost>.comment>ul>li>img {
+    border-radius: 50%;
+}
+
+#Profile .profileFrom .form-control {
+    font-size: 12px;
+}
+
+#Profile .profileFrom button {
+    position: relative;
+    font-size: 10px;
+    margin-top: 0.5rem;
+    background-color: var(--dColor);
+    color: var(--dColorIn);
+    border: 0;
+}
+
+#Profile .profileFrom .text-muted {
+    font-size: 10px;
+}
+
+#countSar7neText {
+    position: absolute;
+    left: 20px;
+    bottom: 25px;
+    font-size: 12px;
+}
+
+#countSar7neText.active {
+    color: red !important
+}
+
+#Profile .ProfileCard.ListTopicSar7ne>.box {
+    margin-top: 1rem;
+}
+
+#Profile .ProfileCard.ListTopicSar7ne>.box>.topic {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #0002;
+    padding-bottom: 1rem;
+    position: relative;
+}
+
+#Profile .ProfileCard.ListTopicSar7ne>.box>.topic>.future>.user {
+    display: flex;
+    align-items: center;
+}
+
+#Profile .ProfileCard.ListTopicSar7ne>.box>.topic>.future>.user>img {
+    border-radius: 50%;
+}
+
+#Profile .ProfileCard.ListTopicSar7ne>.box>.topic>.future>.user>.nameTime {
+    margin: 0 0.3rem;
+}
+
+
+#Profile .ProfileCard.ListTopicSar7ne>.box>.topic>.future>.user>.nameTime>span.name {
+    display: block;
+    font-size: 12px;
+}
+
+#Profile .ProfileCard.ListTopicSar7ne>.box>.topic>.future>.text {
+    margin-top: 0.6rem;
+}
+
+#Profile .ProfileCard.ListTopicSar7ne>.box>.topic>.future>.text>.sender {
+    font-size: 12px;
+    border-right: 5px solid #0003;
+    padding-right: 5px;
+    margin-right: 2rem;
+}
+
+#Profile .ProfileCard.ListTopicSar7ne>.box>.topic>.future>.text>p {
+    font-size: 12px;
+    margin-top: 0.5rem;
+}
+
+#Profile .ProfileCard.ListTopicSar7ne>.box>.topic>.report {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    font-size: 13px;
+    cursor: pointer;
+    color: #0008;
+}
+
+@media (max-width: 991.98px) {
+    #Profile .ProfileHeader>.dataUsernameContent {
+        padding-top: 5rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    #Profile .ProfileHeader>.dataUsernameContent>div {
+        flex-flow: column-reverse;
+    }
+
+    #Profile .ProfileHeader>.dataUsernameContent .SocialLinks {
+        margin-top: 1rem;
+    }
+
+    #Profile .ProfileHeader>.dataUsernameContent .SocialLinks>ul {
+        justify-content: center;
+    }
+
+    #Profile .ProfileHeader .infoActions {
+        flex-flow: unset !important;
+        position: relative !important;
+        top: unset !important;
+        left: unset !important;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+
+    #Profile .ProfileHeader .infoActions>.addFriend,
+    #Profile .ProfileHeader .infoActions>.sendMessage {
+        border-radius: 0px;
+        box-shadow: unset
+    }
+}
+
+/* end css profile */
+
+/* start css settingUser */
+#settingUser .slidSet>.menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+#settingUser .slidSet>.menu>li {
+    background-color: #fff;
+    border-bottom: 1px solid #0001;
+    padding: 0.8rem;
+    position: relative;
+    overflow: hidden;
+}
+
+#settingUser .slidSet>.menu>li>div.bo {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    align-content: center;
+}
+
+#settingUser .slidSet>.menu>li>div.bo>.icon {
+    font-size: 15px;
+    color: var(--dColor);
+}
+
+#settingUser .slidSet>.menu>li>div.bo>.text {
+    padding-right: 1rem;
+}
+
+#settingUser .slidSet>.menu>li>div.bo>.text>strong {
+    font-size: 12px;
+}
+
+#settingUser .slidSet>.menu>li>div.bo>.text>p {
+    font-size: 11px;
+    color: #838383;
+}
+
+#settingUser .slidSet>.menu>li>div.bodyMenuDropped {
+    margin-top: 0.5rem;
+    /* display: none; */
+}
+
+#settingUser .slidSet>.menu>li>div.bodyMenuDropped>ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#settingUser .slidSet>.menu>li>div.bodyMenuDropped>ul>li {
+    display: block;
+}
+
+#settingUser .slidSet>.menu>li>div.bodyMenuDropped>ul>li>a {
+    font-size: 11px;
+    background-color: #0000000a;
+    border: 1px solid #0001;
+    display: block;
+    margin-bottom: 0.4rem;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+#settingUser .slidSet>.menu>li>div.bodyMenuDropped>ul>li>a:hover,
+#settingUser .slidSet>.menu>li>div.bodyMenuDropped>ul>li>a.active {
+    background-color: var(--dColor);
+    color: var(--dColorIn);
+}
+
+#settingUser .slidSet>.menu>li.active>div.bodyMenuDropped {
+    display: block !important;
+}
+
+#settingUser .mainSetting>.title {
+    font-size: 18px;
+    border-bottom: 1px solid #0002;
+    padding-bottom: 0.3rem;
+}
+
+#settingUser .mainSetting .fieldGroup {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+
+#settingUser .mainSetting .fieldGroup>label {
+    font-size: 13px;
+    margin: 0;
+    margin-bottom: 3px;
+    display: block;
+}
+
+#settingUser .mainSetting .fieldGroup>input,
+#settingUser .mainSetting .fieldGroup>select,
+#settingUser .mainSetting .fieldGroup>textarea {
+    font-size: 12px;
+}
+
+#settingUser .mainSetting .fieldGroup>.form-text {
+    font-size: 10px;
+}
+
+#settingUser .mainSetting .fieldGroup>.input-group>span {
+    font-size: 13px;
+}
+
+#settingUser .mainSetting .fieldGroup>.input-group>input {
+    font-size: 12px;
+}
+
+#settingUser .mainSetting .fieldGroup>.editAvatar {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+#settingUser .mainSetting .fieldGroup>.editAvatar>img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 1px solid #0003;
+}
+
+#settingUser .mainSetting .fieldGroup>.editAvatar>.upAvatar {
+    position: absolute;
+    bottom: 9px;
+    left: 0;
+    background-color: var(--backgroundColorBody);
+    border: 1px solid #0002;
+    padding: 3px 10px;
+    font-size: 13px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#settingUser .mainSetting .fieldGroup>.editAvatar>.upAvatar>label {
+    cursor: pointer;
+}
+
+/* end css settingUser */
+
+/* start css report */
+#report {
+    padding: 1rem 5rem;
+    display: block !important;
+    text-align: center;
+}
+
+#report>h4 {
+    display: block;
+    font-size: 16px;
+}
+
+#report>.options,
+#report>.ReportMenu>li {
+    display: block;
+    position: relative;
+    background-color: #ddd;
+    padding: 6px 8px;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+#report>.ReportMenu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    overflow: hidden;
+}
+
+/* end css report */
+
+/* start css page add chapter manga */
+#formAddChapter .fieldGroup {
+    margin-bottom: 1rem;
+}
+
+#formAddChapter .fieldGroup>label {
+    margin: 3px 0;
+    font-size: 13px;
+}
+
+#formAddChapter .fieldGroup>input,
+#formAddChapter .fieldGroup>select {
+    font-size: 12px;
+}
+
+/* end css page add chapter manga */
+
+/* start css page add manga new */
+#formAddChapter ul {
+    margin: 0;
+    padding: 0;
+}
+
+#formAddChapter ul>li {}
+
+#formAddChapter ul>li>button {
+    font-size: 12px;
+    color: #000;
+    background-color: #fff;
+    margin-left: 5px;
+}
+
+#formAddChapter ul>li>button.active {
+    background-color: var(--dColor);
+    color: var(--dColorIn);
+}
+
+#formAddChapter .form-control {}
+
+#formAddChapter .fieldGroup {}
+
+#formAddChapter .fieldGroup>.form-label {}
+
+#formAddChapter .fieldGroup>.cb-Group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+#formAddChapter .fieldGroup>.cb-Group>div {
+    margin: 2px;
+}
+
+#formAddChapter .fieldGroup>.cb-Group>div>label {
+    font-size: 12px;
+    background-color: var(--dColor);
+    color: var(--dColorIn);
+    border: 1px solid #0002;
+}
+
+#formAddChapter .btn-check:active+.btn-primary,
+#formAddChapter .btn-check:checked+.btn-primary,
+#formAddChapter .btn-primary.active,
+#formAddChapter .btn-primary:active,
+#formAddChapter .show>.btn-primary.dropdown-toggle {
+    background-color: var(--dColorLigt) !important;
+}
+
+/* end css page add manga new */
+
+/* start css page read */
+#read {
+    background-color: #fff;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+#read::after {
+    content: '';
+    background-color: var(--dColor);
+    position: absolute;
+    right: -4pc;
+    bottom: -4pc;
+    width: 20pc;
+    height: 20pc;
+    border-radius: 50%;
+}
+
+#read::before {
+    content: '';
+    background-color: var(--dColor);
+    position: absolute;
+    left: -4pc;
+    top: -4pc;
+    width: 20pc;
+    height: 20pc;
+    border-radius: 50%;
+}
+
+#read .logo-R {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+}
+
+#read>div>div>div {
+    margin-bottom: 2rem;
+}
+
+#read h2 {
+    font-size: 26px;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+#read strong {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+#read p {
+    font-size: 13px;
+}
+
+/* end css page read */
+
+/* اختصارات سريعة */
+.avatar-sm {
+    width: 35px;
+    height: 35px;
+    background-color: #fff;
+    border: 1px solid #0002;
+}
+
+.avatar-sm-x1 {
+    width: 25px;
+    height: 25px;
+    background-color: #fff;
+    border: 1px solid #0002;
+}
+
+#formPage .ClickButton::after,
+#formPage .ClickButtonNotNew::after,
+#Profile .ProfileCard.ProfileCard>a.link::after,
+#Profile .profileFrom button:after,
+#report>.options::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0;
+    -ms-transition: .3s all;
+    -webkit-transition: .3s all;
+    -o-transition: .3s all;
+    transition: .3s all;
+}
+
+#formPage .ClickButton:hover::after,
+#formPage .ClickButtonNotNew:hover:after,
+#Profile .ProfileCard.ProfileCard>a.link:hover:after,
+#Profile .profileFrom button:hover:after,
+#report>.options:hover::after {
+    opacity: 0.1;
+}
+
+#Profile .ProfileCard.aboutMe>ul>li:last-child,
+#Profile .ProfileCard.listFriend>ul>li:last-child,
+#Profile .ProfileCard.ListTopicSar7ne>.box>.topic:last-child,
+#settingUser .slidSet>.menu>li:last-child {
+    border: 0;
+}
+
+#settingUser>.banner,
+.b-baner>.banner {
+    margin-bottom: 2rem;
+    background-image: url(../img/banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 3px 1px #0002;
+    padding: 2rem 5px;
+}
+
+#settingUser>.banner::after,
+.b-baner>.banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: -moz-linear-gradient(to right, #ff9100b8 20%, #ff9100 84%);
+    /*  FF3.6-15 */
+    background: -webkit-linear-gradient(to right, #ff9100b8 20%, #ff9100 84%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #ff9100b8 20%, #ff9100 84%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff9100b8', endColorstr='#ff9100', GradientType=1);
+    /* IE6-9 */
+
+}
+
+#settingUser>.banner>.icon,
+.b-baner>.banner>.icon {
+    background-image: url(../img/logo-w.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    width: 80px;
+    height: 100%;
+    top: 0px;
+    right: 20px;
+    z-index: 1;
+}
+
+#settingUser>.banner>.text,
+.b-baner>.banner>.text {
+    position: relative;
+    padding-right: 7rem;
+    z-index: 1;
+    color: #fff;
+}
+
+#settingUser>.banner>.text>strong,
+.b-baner>.banner>.text>strong {
+    font-size: 14px;
+}
+
+#settingUser>.banner>.text>p,
+.b-baner>.banner>.text>p {
+    font-size: 12px;
+}
+
+#settingUser>.banner>.text>p>a,
+.b-baner>.banner>.text>p>a {
+    text-decoration: underline;
+}
+
+.time {
+    display: block;
+    font-size: 10px;
+    color: var(--dColor);
+    cursor: default;
+}
+
+.google {
+    background-color: #fd434f !important;
+    color: #fff !important;
+}
+
+.discord {
+    background-color: #23272a !important;
+    color: #fff !important;
+}
+
+.facebook {
+    background-color: #1877F2 !important;
+    color: #fff !important;
+}
+
+.twitter {
+    background-color: #1DA1F2 !important;
+    color: #fff !important;
+}
+
+.instagram {
+    background-color: #E4405F !important;
+    color: #fff !important;
+}
+
+.youtube {
+    background-color: #CD201F !important;
+    color: #fff !important;
+}
+
+.twitch {
+    background-color: #7b5dfa !important;
+    color: #fff !important;
+}
+
+.mg-modal {
+    text-align: justify !important;
+    padding: 20px 15px;
+    display: block !important;
+    margin: unset !important;
+}
+
+.mg-modal>p {
+    font-size: 12px;
+}
+
+.mg-modal>p>strong {
+    font-size: 13px;
+}
+
+.mg-modal a {
+    text-decoration: underline;
+    color: blue;
+}
+
+.btn-save {
+    background-color: var(--dColor) !important;
+    color: var(--dColorIn) !important;
+    font-size: 12px;
+}
+
+/* اختصارات سريعة */
